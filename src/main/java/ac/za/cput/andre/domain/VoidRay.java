@@ -1,41 +1,41 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Ultralisk implements  Unit {
+public class VoidRay implements Unit {
 
-    public String name(){ return "Ultralisk"; }
+    public String name(){ return "Void Ray"; }
 
-    public double damage(){return 15.0; }
+    public double damage(){return 6.0; }
 
     public double damageVsStrong()
     {
-        return 35.0;
+        return 10.0;
     }
 
     public double range() {
-        return 1.0;
-    }
-
-    public double hp(){
-        return 500.00;
-    }
-
-    public double speed(){
-        return 2.9531;
-    }
-
-    public int armor(){
-        return 1;
-    }
-
-    public int popcap(){
         return 6;
     }
 
+    public double hp(){
+        return 250.00;
+    }
+
+    public double speed(){
+        return 2.25;
+    }
+
+    public int armor(){
+        return 0;
+    }
+
+    public int popcap(){
+        return 3;
+    }
+
     public String type(){
-        return "Massive";
+        return "AirArmored";
     }
 
     public String strongVS(){

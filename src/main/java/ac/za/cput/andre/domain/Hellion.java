@@ -1,30 +1,32 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Stalker implements  Unit {
+public class Hellion implements Unit {
 
-    public String name(){ return "Stalker"; }
+    public String name(){return "Hellion"; }
 
-    public double damage(){return 10.0; }
+    public double damage(){
+        return 8.0;
+    }
 
     public double damageVsStrong(){return 14.0;}
 
     public double range() {
-        return 6.0;
+        return 5;
     }
 
     public double hp(){
-        return 160.00;
+        return 90.00;
     }
 
     public double speed(){
-        return 2.953;
+        return 4.25;
     }
 
     public int armor(){
-        return 1;
+        return 0;
     }
 
     public int popcap(){
@@ -36,10 +38,8 @@ public class Stalker implements  Unit {
     }
 
     public String strongVS(){
-        return "Armored";
+        return "Bio";
     }
 
-    public String weakVS(){
-        return "";
-    }
+    public String weakVS(){return ""; }
 }

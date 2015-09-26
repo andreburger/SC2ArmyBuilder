@@ -7,18 +7,23 @@ public class Mutalisk implements  Unit {
 
     public String name(){ return "Mutalisk"; }
 
-    public double damage(){return 30.0; }
+    public double damage(){return 9.0; }
+
+    public double damageVsStrong()
+    {
+        return 9.0;
+    }
 
     public double range() {
-        return 600.0;
+        return 3.0;
     }
 
     public double hp(){
-        return 150.00;
+        return 120.00;
     }
 
     public double speed(){
-        return 300.0;
+        return 3.75;
     }
 
     public int armor(){
@@ -30,11 +35,11 @@ public class Mutalisk implements  Unit {
     }
 
     public String type(){
-        return "Mech";
+        return "AirBio";
     }
 
     public String strongVS(){
-        return "Mech";
+        return "";
     }
 
     public String weakVS(){

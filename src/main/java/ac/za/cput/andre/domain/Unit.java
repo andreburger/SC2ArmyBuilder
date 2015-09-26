@@ -7,6 +7,7 @@ public interface Unit {
 
     public String name();
     public double damage();
+    public double damageVsStrong();
     public double range();
     public double hp();
     public double speed();

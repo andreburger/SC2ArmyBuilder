@@ -9,16 +9,20 @@ public class Zergling implements  Unit{
 
     public double damage(){return 5.0; }
 
+    public double damageVsStrong()
+    {
+        return 5.0;
+    }
     public double range() {
-        return 0.0;
+        return 0.1;
     }
 
     public double hp(){
-        return 100.00;
+        return 35.00;
     }
 
     public double speed(){
-        return 400.0;
+        return 2.9531;
     }
 
     public int armor(){
@@ -26,7 +30,7 @@ public class Zergling implements  Unit{
     }
 
     public int popcap(){
-        return 2;
+        return 1;
     }
 
     public String type(){
@@ -34,10 +38,10 @@ public class Zergling implements  Unit{
     }
 
     public String strongVS(){
-        return "Bio";
+        return "";
     }
 
     public String weakVS(){
-        return "Mech";
+        return "";
     }
 }

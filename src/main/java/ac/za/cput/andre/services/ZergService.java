@@ -11,4 +11,5 @@ import java.util.List;
 public interface ZergService {
     List<Zerg> getZerg();
     List<Zerg> getSingleZerg(String email);
+    void createArmy(List<String> units,String race, String armyname, String email);
 }

@@ -56,7 +56,7 @@ public class TerranArmies {
     }
 
     @RequestMapping(value = "/terran/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,String raceSel,String armyname,String email){
+    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email){
         serviceT.createArmy(army,raceSel,armyname,email);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }

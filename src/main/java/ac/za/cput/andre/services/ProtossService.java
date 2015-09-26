@@ -10,4 +10,5 @@ import java.util.List;
 public interface ProtossService {
     List<Protoss> getProtoss();
     List<Protoss> getSingleProtoss(String email);
+    void createArmy(List<String> units,String race, String armyname, String email);
 }

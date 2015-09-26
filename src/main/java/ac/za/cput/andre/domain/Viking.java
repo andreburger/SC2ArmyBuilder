@@ -7,22 +7,24 @@ public class Viking implements  Unit {
 
     public String name(){ return "Viking"; }
 
-    public double damage(){return 30.0; }
+    public double damage(){return 20.0; }
+
+    public double damageVsStrong(){return 28.0;}
 
     public double range() {
-        return 600.0;
+        return 9.0;
     }
 
     public double hp(){
-        return 150.00;
+        return 125.00;
     }
 
     public double speed(){
-        return 300.0;
+        return 2.75;
     }
 
     public int armor(){
-        return 3;
+        return 0;
     }
 
     public int popcap(){
@@ -30,14 +32,14 @@ public class Viking implements  Unit {
     }
 
     public String type(){
-        return "Mech";
+        return "AirArmored";
     }
 
     public String strongVS(){
-        return "Mech";
+        return "Armored";
     }
 
     public String weakVS(){
-        return "";
+        return "Armored";
     }
 }

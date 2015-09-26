@@ -7,22 +7,24 @@ public class Zealot implements  Unit{
 
     public String name(){ return "Zealot"; }
 
-    public double damage(){return 15.0; }
+    public double damage(){return 16.0; }
+
+    public double damageVsStrong(){return 16.0;}
 
     public double range() {
         return 0.0;
     }
 
     public double hp(){
-        return 200.00;
+        return 150.00;
     }
 
     public double speed(){
-        return 300.0;
+        return 2.25;
     }
 
     public int armor(){
-        return 0;
+        return 1;
     }
 
     public int popcap(){
@@ -34,10 +36,10 @@ public class Zealot implements  Unit{
     }
 
     public String strongVS(){
-        return "Bio";
+        return "";
     }
 
     public String weakVS(){
-        return "Mech";
+        return "";
     }
 }

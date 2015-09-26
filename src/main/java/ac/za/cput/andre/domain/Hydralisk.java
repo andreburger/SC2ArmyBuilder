@@ -7,22 +7,27 @@ public class Hydralisk implements  Unit{
 
     public String name(){ return "Hydralisk"; }
 
-    public double damage(){return 10.0; }
+    public double damage(){return 12.0; }
+
+    public double damageVsStrong()
+    {
+        return 12.0;
+    }
 
     public double range() {
         return 500.0;
     }
 
     public double hp(){
-        return 250.00;
+        return 80.00;
     }
 
     public double speed(){
-        return 300.0;
+        return 2.25;
     }
 
     public int armor(){
-        return 1;
+        return 0;
     }
 
     public int popcap(){
@@ -34,10 +39,10 @@ public class Hydralisk implements  Unit{
     }
 
     public String strongVS(){
-        return "Bio";
+        return "Air";
     }
 
     public String weakVS(){
-        return "Mech";
+        return "";
     }
 }

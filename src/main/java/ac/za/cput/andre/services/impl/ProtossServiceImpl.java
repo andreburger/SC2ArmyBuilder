@@ -1,6 +1,9 @@
 package ac.za.cput.andre.services.impl;
 
 import ac.za.cput.andre.domain.Protoss;
+import ac.za.cput.andre.domain.Race;
+import ac.za.cput.andre.domain.Unit;
+import ac.za.cput.andre.factory.RaceSelector;
 import ac.za.cput.andre.repository.ProtossRepository;
 import ac.za.cput.andre.services.ProtossService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +42,19 @@ public class ProtossServiceImpl implements ProtossService {
             }
         }
         return allProtossArmies;
+    }
+
+    public void createArmy(List<String> army,String raceSel,String armyname,String email)
+    {
+        RaceSelector race = new RaceSelector();
+        Race protoss = race.getRace(raceSel);
+        for(int i = 0; i < army.size();i++)
+        {
+            Unit unit = protoss.addUnit(army.get(i));
+        }
+
+        protoss.setArmyName(armyname);
+        protoss.setUser(email);
+        repository.save((Protoss)protoss);
     }
 }

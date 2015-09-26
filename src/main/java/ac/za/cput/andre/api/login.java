@@ -23,14 +23,23 @@ public class login {
     private UserService service;
 
     @RequestMapping(value = "/login/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createUser(@RequestBody String email, String fn, String sn, String pw){
+    public ResponseEntity<Void> createUser(@RequestBody String email,@RequestBody String fn,@RequestBody String sn,@RequestBody String pw){
         User user = new User.Builder(email).firstname(fn).lastname(sn).userpassword(pw).build();
-        if(service.checkUser(user))
+        if(service.checkUserExist(user))
         {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
         service.save(user);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
+    }
+
+    @RequestMapping(value = "/login/login", method = RequestMethod.GET)
+    public ResponseEntity<Boolean> createUser(@RequestBody String email, @RequestBody String pw) {
+        if(service.login(email,pw))
+        {
+            return new ResponseEntity<Boolean>(true,HttpStatus.FOUND);
+        }
+        return new ResponseEntity<Boolean>(false,HttpStatus.NOT_FOUND);
     }
 
 }

@@ -13,10 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.hateoas.Link;
 
 import java.util.ArrayList;
@@ -62,6 +59,12 @@ public class ZergArmies {
         }
 
         return hatoes;
+    }
+
+    @RequestMapping(value = "/zerg/create", method = RequestMethod.POST)
+    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email){
+        serviceZ.createArmy(army,raceSel,armyname,email);
+        return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
 }

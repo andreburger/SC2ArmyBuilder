@@ -1,22 +1,25 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Marauder implements  Unit {
+public class Sentry implements Unit {
 
-    public String name(){ return "Marauder"; }
+    public String name(){ return "Sentry"; }
 
-    public double damage(){return 10.0; }
+    public double damage(){return 6.0; }
 
-    public double damageVsStrong(){return 20.0;}
-
-    public double range() {
+    public double damageVsStrong()
+    {
         return 6.0;
     }
 
+    public double range() {
+        return 5;
+    }
+
     public double hp(){
-        return 125.00;
+        return 80.00;
     }
 
     public double speed(){
@@ -32,11 +35,11 @@ public class Marauder implements  Unit {
     }
 
     public String type(){
-        return "Bio";
+        return "Armored";
     }
 
     public String strongVS(){
-        return "Armored";
+        return "";
     }
 
     public String weakVS(){

@@ -1,9 +1,9 @@
 package ac.za.cput.andre.services.impl;
 
-import ac.za.cput.andre.domain.Terran;
+import ac.za.cput.andre.domain.Race;
 import ac.za.cput.andre.domain.Unit;
 import ac.za.cput.andre.domain.Zerg;
-import ac.za.cput.andre.repository.TerranRepository;
+import ac.za.cput.andre.factory.RaceSelector;
 import ac.za.cput.andre.repository.ZergRepository;
 import ac.za.cput.andre.services.ZergService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +42,19 @@ public class ZergServiceImpl implements ZergService {
             }
         }
         return allZergArmies;
+    }
+
+    public void createArmy(List<String> army,String raceSel,String armyname,String email)
+    {
+        RaceSelector race = new RaceSelector();
+        Race zerg = race.getRace(raceSel);
+        for(int i = 0; i < army.size();i++)
+        {
+            Unit unit = zerg.addUnit(army.get(i));
+        }
+
+        zerg.setArmyName(armyname);
+        zerg.setUser(email);
+        repository.save((Zerg)zerg);
     }
 }

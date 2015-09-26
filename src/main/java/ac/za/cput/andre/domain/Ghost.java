@@ -1,22 +1,24 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Marauder implements  Unit {
+public class Ghost implements Unit {
 
-    public String name(){ return "Marauder"; }
+    public String name(){return "Ghost"; }
 
-    public double damage(){return 10.0; }
+    public double damage(){
+        return 10.0;
+    }
 
     public double damageVsStrong(){return 20.0;}
 
     public double range() {
-        return 6.0;
+        return 6;
     }
 
     public double hp(){
-        return 125.00;
+        return 100.00;
     }
 
     public double speed(){
@@ -24,7 +26,7 @@ public class Marauder implements  Unit {
     }
 
     public int armor(){
-        return 1;
+        return 0;
     }
 
     public int popcap(){
@@ -36,10 +38,9 @@ public class Marauder implements  Unit {
     }
 
     public String strongVS(){
-        return "Armored";
+        return "Bio";
     }
 
-    public String weakVS(){
-        return "";
-    }
+    public String weakVS(){return ""; }
+
 }

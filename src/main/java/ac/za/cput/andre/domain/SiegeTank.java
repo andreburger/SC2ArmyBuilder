@@ -1,22 +1,24 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Immortal implements  Unit {
+public class SiegeTank implements Unit {
 
-    public String name(){ return "Immortal"; }
+    public String name(){return "Siege Tank"; }
 
-    public double damage(){return 20.0; }
+    public double damage(){
+        return 35.0;
+    }
 
     public double damageVsStrong(){return 50.0;}
 
     public double range() {
-        return 6;
+        return 13;
     }
 
     public double hp(){
-        return 300;
+        return 160.00;
     }
 
     public double speed(){
@@ -28,7 +30,7 @@ public class Immortal implements  Unit {
     }
 
     public int popcap(){
-        return 4;
+        return 3;
     }
 
     public String type(){
@@ -39,7 +41,5 @@ public class Immortal implements  Unit {
         return "Armored";
     }
 
-    public String weakVS(){
-        return "Bio";
-    }
+    public String weakVS(){return "Armored"; }
 }

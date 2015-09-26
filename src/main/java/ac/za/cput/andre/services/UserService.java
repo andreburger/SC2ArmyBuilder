@@ -7,7 +7,8 @@ import ac.za.cput.andre.domain.User;
  */
 public interface UserService {
 
-    boolean checkUser(User user);
+    boolean checkUserExist(User user);
+    boolean login(String email, String pw);
     User save(User user);
     void delete(User user);
     User update(User user);

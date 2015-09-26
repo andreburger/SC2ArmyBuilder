@@ -1,22 +1,24 @@
 package ac.za.cput.andre.domain;
 
 /**
- * Created by student on 2015/04/26.
+ * Created by student on 2015/09/26.
  */
-public class Marine implements Unit{
+public class Baneling implements Unit {
 
-    public String name(){ return "Marine"; }
+    public String name(){return "Baneling"; }
 
-    public double damage(){return 6.0; }
+    public double damage(){
+        return 20.0;
+    }
 
-    public double damageVsStrong(){return 6.0;}
+    public double damageVsStrong(){return 35.0;}
 
     public double range() {
-        return 5.0;
+        return 6;
     }
 
     public double hp(){
-        return 45.0;
+        return 30.00;
     }
 
     public double speed(){
@@ -36,12 +38,8 @@ public class Marine implements Unit{
     }
 
     public String strongVS(){
-        return "";
+        return "Light";
     }
 
-    public String weakVS(){
-        return "";
-    }
-
-
+    public String weakVS(){return ""; }
 }

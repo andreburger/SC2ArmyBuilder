@@ -3,7 +3,6 @@ package ac.za.cput.andre.services.impl;
 import ac.za.cput.andre.domain.Race;
 import ac.za.cput.andre.domain.Terran;
 import ac.za.cput.andre.domain.Unit;
-import ac.za.cput.andre.domain.User;
 import ac.za.cput.andre.factory.RaceSelector;
 import ac.za.cput.andre.repository.TerranRepository;
 import ac.za.cput.andre.services.TerranService;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**

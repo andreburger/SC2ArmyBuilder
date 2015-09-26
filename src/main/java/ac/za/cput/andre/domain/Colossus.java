@@ -10,8 +10,10 @@ public class Colossus implements Unit {
         return 30.0;
     }
 
+    public double damageVsStrong(){return 30.0;}
+
     public double range() {
-        return 500.0;
+        return 6;
     }
 
     public double hp(){
@@ -19,24 +21,24 @@ public class Colossus implements Unit {
     }
 
     public double speed(){
-        return 300.0;
+        return 2.25;
     }
 
     public int armor(){
-        return 0;
+        return 1;
     }
 
     public int popcap(){
-        return 5;
+        return 6;
     }
 
     public String type(){
-        return "Mech";
+        return "Massive";
     }
 
     public String strongVS(){
         return "Bio";
     }
 
-    public String weakVS(){return "Mech"; }
+    public String weakVS(){return "Air"; }
 }

@@ -14,11 +14,38 @@ public class UserServiceimpl implements UserService{
     @Autowired
     UserRepository repository;
 
-    public boolean checkUser(User user)
+    public boolean checkUserExist(User userNew)
     {
+        String email = userNew.getEmail();
+        Iterable <User> values = repository.findAll();
+        for(User user: values)
+        {
+            String userOld = user.getEmail();
+            if(email.equals(userOld))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public boolean login(String email, String pw)
+    {
+        Iterable <User> values = repository.findAll();
+        for(User user: values)
+        {
+            String oldEmail = user.getEmail();
+            String oldPw = user.getUserpassword();
+            if(email.equals(oldEmail))
+            {
+                if(pw.equals(oldPw))
+                {
+                    return true;
+                }
+            }
 
-        return true;
+        }
+        return false;
     }
 
     public User save(User entity) {
