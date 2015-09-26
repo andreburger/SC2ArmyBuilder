@@ -4,11 +4,13 @@ import ac.za.cput.andre.domain.Terran;
 import ac.za.cput.andre.model.TerranResource;
 import ac.za.cput.andre.services.TerranService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.hateoas.Link;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ public class TerranArmies {
     @Autowired
     private TerranService serviceT;
 
-    @RequestMapping(value="/terran/{email}", method= RequestMethod.GET)
+    @RequestMapping(value="/terran/{email}", method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Terran>> getSingleTerran(@PathVariable String email) {
 
         List<Terran> terran = serviceT.getSingleTerran(email);
@@ -35,29 +37,24 @@ public class TerranArmies {
         return new ResponseEntity<List<Terran>>(terran,HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/terran", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<TerranResource> getTerran(){
-        List<TerranResource> hatoes = new ArrayList<>();
+    @RequestMapping(value = "/terran", method = RequestMethod.GET)
+    public ResponseEntity<List<Terran>> getTerran(){
         List<Terran> ter = serviceT.getTerran();
-        for(Terran terran: ter)
+
+        if(ter.isEmpty())
         {
-            TerranResource res = new TerranResource
-                    .Builder(terran.getArmyName())
-                    .resid(terran.getID())
-                    .armyUnits(terran.getArmy())
-                    .build();
-
-            Link link = new Link("http://localhost:8080/api/home/terran/"+ terran.getUser()).withRel("depts");
-            res.add(link);
-            hatoes.add(res);
+            return new ResponseEntity<List<Terran>>(HttpStatus.NO_CONTENT);
         }
-
-        return hatoes;
+        return new ResponseEntity<List<Terran>>(ter, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/terran/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email){
+    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email,UriComponentsBuilder ucBuilder){
         serviceT.createArmy(army,raceSel,armyname,email);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/terran/{email}").buildAndExpand(email).toUri());
+
+        return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 }

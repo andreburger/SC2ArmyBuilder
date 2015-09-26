@@ -10,11 +10,13 @@ import ac.za.cput.andre.services.ProtossService;
 import ac.za.cput.andre.services.TerranService;
 import ac.za.cput.andre.services.ZergService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.hateoas.Link;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,28 +44,23 @@ public class ProtossArmies {
     }
 
     @RequestMapping(value = "/protoss", method = RequestMethod.GET)
-    public List<ProtossResource> getProtoss(){
-        List<ProtossResource> hatoes = new ArrayList<>();
+    public ResponseEntity<List<Protoss>> getProtoss(){
         List<Protoss> pro = serviceP.getProtoss();
-        for(Protoss protoss: pro)
+
+        if(pro.isEmpty())
         {
-            ProtossResource res = new ProtossResource
-                    .Builder(protoss.getArmyName())
-                    .resid(protoss.getID())
-                    .armyUnits(protoss.getArmy())
-                    .build();
-
-            Link link = new Link("http://localhost:8080/api/home/protoss/"+protoss.getUser()).withRel("depts");
-            res.add(link);
-            hatoes.add(res);
+            return new ResponseEntity<List<Protoss>>(HttpStatus.NO_CONTENT);
         }
-
-        return hatoes;
+        return new ResponseEntity<List<Protoss>>(pro, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/protoss/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel, @RequestBody String armyname, @RequestBody String email){
+    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel, @RequestBody String armyname, @RequestBody String email,UriComponentsBuilder ucBuilder){
         serviceP.createArmy(army,raceSel,armyname,email);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/protoss/{email}").buildAndExpand(email).toUri());
+
+        return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 }

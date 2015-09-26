@@ -36,21 +36,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Terran.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Terran.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Terran.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4820144" vertical-offset="3288" max-vertical-offset="4122">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3288" max-vertical-offset="4122">
               <caret line="229" column="62" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Protoss.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Protoss.java">
+      <file leaf-file-name="login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3288" max-vertical-offset="4554">
-              <caret line="237" column="80" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerranArmies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/TerranArmies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="954">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProtossArmies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ProtossArmies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="954">
+              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZergArmies.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ZergArmies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5834348" vertical-offset="61" max-vertical-offset="990">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,9 +98,6 @@
         <option value="$PROJECT_DIR$/settings.xml" />
         <option value="$PROJECT_DIR$/.idea/.name" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ProtossArmies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ZergArmies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/TerranArmies.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/ProtossService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/ZergService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/impl/ProtossServiceImpl.java" />
@@ -83,7 +110,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Stalker.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Ultralisk.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Marauder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/login.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Protoss.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Colossus.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/DarkTemplar.java" />
@@ -115,6 +141,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Archon.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Zerg.java" />
         <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Terran.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ProtossArmies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ZergArmies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/TerranArmies.java" />
       </list>
     </option>
   </component>
@@ -324,7 +354,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -862,12 +892,12 @@
       <workItem from="1443220858261" duration="979000" />
       <workItem from="1443222298171" duration="528000" />
       <workItem from="1443224831166" duration="658000" />
-      <workItem from="1443263681129" duration="13375000" />
+      <workItem from="1443263681129" duration="15239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105500000" />
+    <option name="totallyTimeSpent" value="107364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="959" extended-state="1" />
@@ -960,22 +990,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ArmySC2.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07194245" vertical-offset="822" max-vertical-offset="1656">
-          <caret line="49" column="109" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ZergArmies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1062">
-          <caret line="64" column="144" selection-start-line="64" selection-start-column="144" selection-end-line="64" selection-end-column="144" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/TerranService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -1000,14 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ProtossArmies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1044">
-          <caret line="64" column="146" selection-start-line="64" selection-start-column="146" selection-end-line="64" selection-end-column="146" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/impl/ZergServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
@@ -1023,22 +1029,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/impl/TerranServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23741007" vertical-offset="0" max-vertical-offset="1170">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/TerranArmies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77466506" vertical-offset="210" max-vertical-offset="1044">
-          <caret line="58" column="144" selection-start-line="58" selection-start-column="144" selection-end-line="58" selection-end-column="144" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,14 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41007194" vertical-offset="108" max-vertical-offset="1098">
           <caret line="29" column="5" selection-start-line="16" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38848922" vertical-offset="0" max-vertical-offset="834">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1398,10 +1380,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/services/impl/TerranServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="1170">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/domain/Terran.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4820144" vertical-offset="3288" max-vertical-offset="4122">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3288" max-vertical-offset="4122">
           <caret line="229" column="62" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/TerranArmies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="954">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ProtossArmies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="954">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ac/za/cput/andre/api/ZergArmies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5834348" vertical-offset="61" max-vertical-offset="990">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>

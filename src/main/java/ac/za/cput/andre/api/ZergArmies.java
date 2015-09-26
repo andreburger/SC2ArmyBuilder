@@ -10,11 +10,13 @@ import ac.za.cput.andre.services.ProtossService;
 import ac.za.cput.andre.services.TerranService;
 import ac.za.cput.andre.services.ZergService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.hateoas.Link;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,28 +45,24 @@ public class ZergArmies {
     }
 
     @RequestMapping(value = "/zerg", method = RequestMethod.GET)
-    public List<ZergResource> getZerg() {
-        List<ZergResource> hatoes = new ArrayList<>();
+    public ResponseEntity<List<Zerg>> getZerg() {
         List<Zerg> zer = serviceZ.getZerg();
-        for (Zerg zerg : zer) {
-            ZergResource res = new ZergResource
-                    .Builder(zerg.getArmyName())
-                    .resid(zerg.getID())
-                    .armyUnits(zerg.getArmy())
-                    .build();
 
-            Link link = new Link("http://localhost:8080/api/home/zerg/" + zerg.getUser()).withRel("depts");
-            res.add(link);
-            hatoes.add(res);
+        if(zer.isEmpty())
+        {
+            return new ResponseEntity<List<Zerg>>(HttpStatus.NO_CONTENT);
         }
-
-        return hatoes;
+        return new ResponseEntity<List<Zerg>>(zer, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/zerg/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email){
+    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email,UriComponentsBuilder ucBuilder){
         serviceZ.createArmy(army,raceSel,armyname,email);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/zerg/{email}").buildAndExpand(email).toUri());
+
+        return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 
 }

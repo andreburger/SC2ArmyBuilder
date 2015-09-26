@@ -34,7 +34,7 @@ public class login {
     }
 
     @RequestMapping(value = "/login/login", method = RequestMethod.GET)
-    public ResponseEntity<Boolean> createUser(@RequestBody String email, @RequestBody String pw) {
+    public ResponseEntity<Boolean> login(@RequestBody String email, @RequestBody String pw) {
         if(service.login(email,pw))
         {
             return new ResponseEntity<Boolean>(true,HttpStatus.FOUND);
