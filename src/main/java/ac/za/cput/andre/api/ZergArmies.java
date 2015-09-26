@@ -32,7 +32,7 @@ public class ZergArmies {
     private ZergService serviceZ;
 
 
-    @RequestMapping(value = "/zerg/{email}", method = RequestMethod.GET)
+    @RequestMapping(value = "/zerg/{user}", method = RequestMethod.GET)
     public ResponseEntity<List<Zerg>> getSingleZerg(@PathVariable String email) {
 
         List<Zerg> zerg = serviceZ.getSingleZerg(email);

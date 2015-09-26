@@ -31,7 +31,7 @@ public class ProtossArmies {
     @Autowired
     private ProtossService serviceP;
 
-    @RequestMapping(value="/protoss/{email}", method= RequestMethod.GET)
+    @RequestMapping(value="/protoss/{user}", method= RequestMethod.GET)
     public ResponseEntity<List<Protoss>> getSingleProtoss(@PathVariable String email) {
 
         List<Protoss> protoss = serviceP.getSingleProtoss(email);

@@ -25,7 +25,7 @@ public class TerranArmies {
     @Autowired
     private TerranService serviceT;
 
-    @RequestMapping(value="/terran/{email}", method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value="/terran/{user}", method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Terran>> getSingleTerran(@PathVariable String email) {
 
         List<Terran> terran = serviceT.getSingleTerran(email);
