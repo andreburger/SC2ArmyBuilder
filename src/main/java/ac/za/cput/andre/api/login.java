@@ -5,6 +5,7 @@ import ac.za.cput.andre.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,15 +33,15 @@ public class login {
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/login/login", method = RequestMethod.GET)
-    public ResponseEntity<String> login(@RequestBody User user) {
+    @RequestMapping(value = "/login/login", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> login(@RequestBody User user) {
         String email = user.getEmail();
         String pw = user.getUserpassword();
         if(service.login(email,pw))
         {
-            return new ResponseEntity<String>("true",HttpStatus.FOUND);
+            return new ResponseEntity<Void>(HttpStatus.FOUND);
         }
-        return new ResponseEntity<String>("false",HttpStatus.NOT_FOUND);
+        return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
     }
 
 }
