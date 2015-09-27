@@ -1,5 +1,6 @@
 package ac.za.cput.andre.api;
 
+import ac.za.cput.andre.domain.ArmyService;
 import ac.za.cput.andre.domain.Terran;
 import ac.za.cput.andre.model.TerranResource;
 import ac.za.cput.andre.services.TerranService;
@@ -49,7 +50,12 @@ public class TerranArmies {
     }
 
     @RequestMapping(value = "/terran/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createArmy(@RequestBody List<String> army,@RequestBody String raceSel,@RequestBody String armyname,@RequestBody String email,UriComponentsBuilder ucBuilder){
+    public ResponseEntity<Void> createArmy(@RequestBody ArmyService armyService,UriComponentsBuilder ucBuilder){
+        List<String> army = armyService.getArmy();
+        String raceSel = armyService.getRace();
+        String armyname = armyService.getArmyname();
+        String email = armyService.getEmail();
+
         serviceT.createArmy(army,raceSel,armyname,email);
 
         HttpHeaders headers = new HttpHeaders();
