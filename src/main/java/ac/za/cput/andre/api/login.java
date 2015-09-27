@@ -23,8 +23,7 @@ public class login {
     private UserService service;
 
     @RequestMapping(value = "/login/create", method = RequestMethod.POST)
-    public ResponseEntity<Void> createUser(@RequestBody String email,@RequestBody String fn,@RequestBody String sn,@RequestBody String pw){
-        User user = new User.Builder(email).firstname(fn).lastname(sn).userpassword(pw).build();
+    public ResponseEntity<Void> createUser(@RequestBody User user){
         if(service.checkUserExist(user))
         {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
