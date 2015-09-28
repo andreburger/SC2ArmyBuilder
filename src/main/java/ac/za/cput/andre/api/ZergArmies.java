@@ -62,8 +62,8 @@ public class ZergArmies {
         String raceSel = armyService.getRace();
         String armyname = armyService.getArmyname();
         String email = armyService.getEmail();
-
-        serviceZ.createArmy(army,raceSel,armyname,email);
+        String pop = armyService.getPop();
+        serviceZ.createArmy(army,raceSel,armyname,email,pop);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/zerg/{email}").buildAndExpand(email).toUri());

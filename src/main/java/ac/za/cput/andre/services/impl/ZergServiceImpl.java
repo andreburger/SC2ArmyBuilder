@@ -44,7 +44,7 @@ public class ZergServiceImpl implements ZergService {
         return allZergArmies;
     }
 
-    public void createArmy(List<String> army,String raceSel,String armyname,String email)
+    public void createArmy(List<String> army,String raceSel,String armyname,String email,String pop)
     {
         RaceSelector race = new RaceSelector();
         Race zerg = race.getRace(raceSel);
@@ -55,6 +55,7 @@ public class ZergServiceImpl implements ZergService {
 
         zerg.setArmyName(armyname);
         zerg.setUser(email);
+        zerg.setArmyPop(Integer.parseInt(pop));
         repository.save((Zerg)zerg);
     }
 }

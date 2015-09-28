@@ -12,5 +12,5 @@ import java.util.List;
 public interface TerranService {
     List<Terran> getTerran();
     List<Terran> getSingleTerran(String email);
-    void createArmy(List<String> units,String race, String armyname, String email);
+    void createArmy(List<String> units,String race, String armyname, String email,String pop);
 }

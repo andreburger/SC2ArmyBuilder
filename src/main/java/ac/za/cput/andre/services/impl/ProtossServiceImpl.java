@@ -44,7 +44,7 @@ public class ProtossServiceImpl implements ProtossService {
         return allProtossArmies;
     }
 
-    public void createArmy(List<String> army,String raceSel,String armyname,String email)
+    public void createArmy(List<String> army,String raceSel,String armyname,String email,String pop)
     {
         RaceSelector race = new RaceSelector();
         Race protoss = race.getRace(raceSel);
@@ -55,6 +55,7 @@ public class ProtossServiceImpl implements ProtossService {
 
         protoss.setArmyName(armyname);
         protoss.setUser(email);
+        protoss.setArmyPop(Integer.parseInt(pop));
         repository.save((Protoss)protoss);
     }
 }

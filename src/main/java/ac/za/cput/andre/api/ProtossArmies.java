@@ -61,8 +61,8 @@ public class ProtossArmies {
         String raceSel = armyService.getRace();
         String armyname = armyService.getArmyname();
         String email = armyService.getEmail();
-
-        serviceP.createArmy(army,raceSel,armyname,email);
+        String pop = armyService.getPop();
+        serviceP.createArmy(army,raceSel,armyname,email,pop);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/protoss/{email}").buildAndExpand(email).toUri());

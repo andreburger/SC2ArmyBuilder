@@ -11,6 +11,7 @@ public class ArmyService {
     private String race;
     private String armyname;
     private String email;
+    private String pop;
 
     public List<String> getArmy()
     {
@@ -46,6 +47,15 @@ public class ArmyService {
     public void setEmail(String value)
     {
         this.email = value;
+    }
+
+    public String getPop()
+    {
+        return pop;
+    }
+    public void setPop(String value)
+    {
+        this.pop = value;
     }
 
 

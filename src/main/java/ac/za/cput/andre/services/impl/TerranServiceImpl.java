@@ -43,7 +43,7 @@ public class TerranServiceImpl implements TerranService {
         return allTerranArmies;
     }
 
-    public void createArmy(List<String> army,String raceSel,String armyname,String email)
+    public void createArmy(List<String> army,String raceSel,String armyname,String email,String pop)
     {
         RaceSelector race = new RaceSelector();
         Race terran = race.getRace(raceSel);
@@ -54,6 +54,7 @@ public class TerranServiceImpl implements TerranService {
 
         terran.setArmyName(armyname);
         terran.setUser(email);
+        terran.setArmyPop(Integer.parseInt(pop));
         repository.save((Terran)terran);
     }
 }

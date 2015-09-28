@@ -55,8 +55,8 @@ public class TerranArmies {
         String raceSel = armyService.getRace();
         String armyname = armyService.getArmyname();
         String email = armyService.getEmail();
-
-        serviceT.createArmy(army,raceSel,armyname,email);
+        String pop = armyService.getPop();
+        serviceT.createArmy(army,raceSel,armyname,email,pop);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/terran/{email}").buildAndExpand(email).toUri());
