@@ -71,4 +71,15 @@ public class ZergArmies {
         return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 
+    @RequestMapping(value = "/zerg/delete{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Zerg> deleteArmy(@PathVariable("id")Integer id){
+        Zerg zerg = serviceZ.findById(id);
+        if(zerg == null)
+        {
+            return new ResponseEntity<Zerg>(HttpStatus.NOT_FOUND);
+        }
+        serviceZ.delete(zerg);
+        return new ResponseEntity<Zerg>(HttpStatus.NO_CONTENT);
+    }
+
 }

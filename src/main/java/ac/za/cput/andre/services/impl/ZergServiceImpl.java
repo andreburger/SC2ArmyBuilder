@@ -58,4 +58,17 @@ public class ZergServiceImpl implements ZergService {
         zerg.setArmyPop(Integer.parseInt(pop));
         repository.save((Zerg)zerg);
     }
+
+    public void delete(Zerg zerg)
+    {
+        repository.delete(zerg);
+    }
+
+    public Zerg findById(long id)
+    {
+        Zerg zerg;
+        zerg = repository.findOne(id);
+
+        return zerg;
+    }
 }

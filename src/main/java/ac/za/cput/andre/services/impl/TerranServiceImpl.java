@@ -57,4 +57,17 @@ public class TerranServiceImpl implements TerranService {
         terran.setArmyPop(Integer.parseInt(pop));
         repository.save((Terran)terran);
     }
+
+    public void delete(Terran terran)
+    {
+        repository.delete(terran);
+    }
+
+    public Terran findById(long id)
+    {
+        Terran terran;
+        terran = repository.findOne(id);
+
+        return terran;
+    }
 }

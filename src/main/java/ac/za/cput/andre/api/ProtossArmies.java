@@ -69,4 +69,16 @@ public class ProtossArmies {
 
         return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
+
+
+    @RequestMapping(value = "/protoss/delete{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Protoss> deleteArmy(@PathVariable("id")Integer id){
+        Protoss protoss = serviceP.findById(id);
+        if(protoss == null)
+        {
+            return new ResponseEntity<Protoss>(HttpStatus.NOT_FOUND);
+        }
+        serviceP.delete(protoss);
+        return new ResponseEntity<Protoss>(HttpStatus.NO_CONTENT);
+    }
 }

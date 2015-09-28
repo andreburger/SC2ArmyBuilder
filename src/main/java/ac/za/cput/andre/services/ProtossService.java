@@ -11,4 +11,6 @@ public interface ProtossService {
     List<Protoss> getProtoss();
     List<Protoss> getSingleProtoss(String email);
     void createArmy(List<String> units,String race, String armyname, String email,String pop);
+    void delete(Protoss protoss);
+    Protoss findById(long id);
 }

@@ -58,4 +58,17 @@ public class ProtossServiceImpl implements ProtossService {
         protoss.setArmyPop(Integer.parseInt(pop));
         repository.save((Protoss)protoss);
     }
+
+    public void delete(Protoss protoss)
+    {
+        repository.delete(protoss);
+    }
+
+    public Protoss findById(long id)
+    {
+        Protoss protoss;
+        protoss = repository.findOne(id);
+
+        return protoss;
+    }
 }
