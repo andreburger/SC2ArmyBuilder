@@ -71,7 +71,7 @@ public class ProtossArmies {
     }
 
 
-    @RequestMapping(value = "/protoss/delete{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/protoss/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Protoss> deleteArmy(@PathVariable("id")Integer id){
         Protoss protoss = serviceP.findById(id);
         if(protoss == null)

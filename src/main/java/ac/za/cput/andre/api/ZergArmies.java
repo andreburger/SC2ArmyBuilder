@@ -71,7 +71,7 @@ public class ZergArmies {
         return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/zerg/delete{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/zerg/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Zerg> deleteArmy(@PathVariable("id")Integer id){
         Zerg zerg = serviceZ.findById(id);
         if(zerg == null)

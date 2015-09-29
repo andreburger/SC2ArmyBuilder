@@ -64,7 +64,7 @@ public class TerranArmies {
         return new ResponseEntity<Void>(headers,HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/terran/delete{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/terran/delete/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Terran> deleteArmy(@PathVariable("id")Integer id){
         Terran terran = serviceT.findById(id);
         if(terran == null)
